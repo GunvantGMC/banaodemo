@@ -18,3 +18,7 @@ showCstmSnackBar({required context, required msg, durInSec = 4}) {
   );
   ScaffoldMessenger.of(context).showSnackBar(snackBar);
 }
+
+bool stringToBool({required str}) {
+  return str.toString().toLowerCase() == "true";
+}

@@ -1,12 +1,13 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
-import 'package:banaodemo/Models/TileCardMode.dart';
+import 'package:banaodemo/Models/EventModel.dart';
+import 'package:banaodemo/Models/ProgramModel.dart';
 import 'package:banaodemo/Services/CstmTheme.dart';
 import 'package:banaodemo/Services/Functions.dart';
 import 'package:flutter/widgets.dart';
 
 class EventsTileCard extends StatelessWidget {
-  final TileCardModel tileCardModel;
+  final EventModel tileCardModel;
   const EventsTileCard({super.key, required this.tileCardModel});
 
   @override
@@ -55,7 +56,7 @@ class EventsTileCard extends StatelessWidget {
                 children: [
                   SizedBox(height: 10.0),
                   Text(
-                    tileCardModel.title.toUpperCase(),
+                    tileCardModel.category.toUpperCase(),
                     style: cstmTxtStyle(
                       fs: 12,
                       fw: FontWeight.bold,
@@ -63,7 +64,7 @@ class EventsTileCard extends StatelessWidget {
                   ),
                   SizedBox(height: 10.0),
                   Text(
-                    tileCardModel.desc,
+                    tileCardModel.name,
                     style: cstmTxtStyle(
                       fs: 16,
                       fc: CstmTheme.blackColor,
@@ -75,7 +76,7 @@ class EventsTileCard extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        tileCardModel.totLessons,
+                        tileCardModel.getimplifiedDate(),
                         style: cstmTxtStyle(
                           fs: 12,
                           fw: FontWeight.w500,

@@ -1,12 +1,12 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
-import 'package:banaodemo/Models/TileCardMode.dart';
+import 'package:banaodemo/Models/ProgramModel.dart';
 import 'package:banaodemo/Services/CstmTheme.dart';
 import 'package:banaodemo/Services/Functions.dart';
 import 'package:flutter/widgets.dart';
 
 class ProgramsTileCard extends StatelessWidget {
-  final TileCardModel tileCardModel;
+  final ProgramModel tileCardModel;
   const ProgramsTileCard({super.key, required this.tileCardModel});
 
   @override
@@ -57,7 +57,7 @@ class ProgramsTileCard extends StatelessWidget {
                 children: [
                   SizedBox(height: 10.0),
                   Text(
-                    tileCardModel.title.toUpperCase(),
+                    tileCardModel.category.toUpperCase(),
                     style: cstmTxtStyle(
                       fs: 12,
                       fw: FontWeight.bold,
@@ -65,7 +65,7 @@ class ProgramsTileCard extends StatelessWidget {
                   ),
                   SizedBox(height: 10.0),
                   Text(
-                    tileCardModel.desc,
+                    tileCardModel.name,
                     style: cstmTxtStyle(
                       fs: 16,
                       fc: CstmTheme.blackColor,
@@ -74,7 +74,7 @@ class ProgramsTileCard extends StatelessWidget {
                   ),
                   SizedBox(height: 20.0),
                   Text(
-                    "${tileCardModel.totLessons} lessons",
+                    "${tileCardModel.lesson} lessons",
                     style: cstmTxtStyle(
                       fs: 12,
                       fw: FontWeight.w500,
